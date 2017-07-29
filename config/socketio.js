@@ -4,7 +4,6 @@
 
 'use strict';
 
-var User = require('../api/user/user.model');
 var _ = require('lodash');
 
 // When the user disconnects.. perform this
@@ -19,7 +18,6 @@ function onConnect(socket) {
     });
 
     // Insert sockets below
-    require('../api/thing/thing.socket').register(socket);
 }
 
 module.exports = function (socketio) {

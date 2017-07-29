@@ -8,8 +8,6 @@
 var bodyParser = require('body-parser');
 var config = require('./config.js');
 var session = require('express-session');
-var mongoStore = require('connect-mongo')(session);
-var mongoose = require('mongoose');
 var cors = require('cors');
 var passport = require('passport');
 
@@ -33,7 +31,6 @@ module.exports = function (app) {
 		secret: config.secret,
 		resave: true,
 		saveUninitialized: true,
-        store: new mongoStore({mongooseConnection: mongoose.connection})
 	}));
 
 };

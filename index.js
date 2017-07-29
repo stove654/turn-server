@@ -1,16 +1,12 @@
 var express = require('express');
 var app = express();
 var morgan = require('morgan');
-var mongoose = require('mongoose');
 var config = require('./config/config');
 var path = require('path');
 
 // set port
 var port = process.env.PORT || 8080;
 
-// Connect to database
-mongoose.Promise = global.Promise;
-mongoose.connect(config.database);
 
 var server = require('http').createServer(app);
 
