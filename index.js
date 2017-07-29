@@ -9,6 +9,7 @@ var path = require('path');
 var port = process.env.PORT || 8080;
 
 // Connect to database
+mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
 
 var server = require('http').createServer(app);

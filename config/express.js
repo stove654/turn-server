@@ -33,7 +33,7 @@ module.exports = function (app) {
 		secret: config.secret,
 		resave: true,
 		saveUninitialized: true,
-		store: new mongoStore({mongooseConnection: mongoose.connection})
+        store: new mongoStore({mongooseConnection: mongoose.connection})
 	}));
 
 };
